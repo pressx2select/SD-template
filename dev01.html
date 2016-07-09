@@ -5,28 +5,20 @@
   <script language="JavaScript">
     function showInput() {
         document.getElementById('display').innerHTML = 
-        document.getElementById('display2').innerHTML = 
-
                     document.getElementById("user_input").value;
-                    document.getElementById("user_input2").value;
     }
   </script>
 
   </head>
-
-
 <body>
 
   <form>
     <label><b>Enter a Message</b></label>
     <input type="text" name="message" id="user_input">
-    <input type="text" name="message2" id="user_input2">
   </form>
 
   <input type="submit" onclick="showInput();"><br/>
-  <label>You are total input: </label>
+  <label>Your total input: </label>
   <p>your <span id='display'></span></p>
-  <p>your <span id='display'></span></p>
-
 </body>
 </html>
