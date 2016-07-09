@@ -7,27 +7,10 @@ Device ID
 Location
 Department
 <br><br><br><br><br>
+<form>
+  First name:<br>
+  <input type="text" name="firstname"><br>
+  Last name:<br>
+  <input type="text" name="lastname">
+</form>
 
-      <HEAD>
-        <TITLE>Sum</TITLE>
-
-        <script type="text/javascript">
-          function sum()
-          {
-             var num1 = document.myform.number1.value;
-             var num2 = document.myform.number2.value;
-             var sum = parseInt(num1) + parseInt(num2);
-             document.getElementById('add').innerHTML = sum;
-          }
-        </script>
-      </HEAD>
-
-      <BODY>
-        <FORM NAME="myform">
-          <INPUT TYPE="text" NAME="number1" VALUE=""> + 
-          <INPUT TYPE="text" NAME="number2" VALUE="">
-          <INPUT TYPE="button" NAME="button" Value="=" onClick="sum()">
-          <INPUT TYPE="text" ID="add" NAME="result" VALUE="">
-        </FORM>
-
-      </BODY>
