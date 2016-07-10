@@ -4,8 +4,22 @@
   <meta charset="UTF-8">
   <script language="JavaScript">
     function showInput() {
-        document.getElementById('display').innerHTML = 
-                    document.getElementById("user_input").value;
+        document.getElementById('displayOPID').innerHTML = 
+                    document.getElementById("user_inputOPID").value;
+
+        document.getElementById('displayDeviceID').innerHTML = 
+                    document.getElementById("user_inputDeviceID").value;
+
+        document.getElementById('displayLocation').innerHTML = 
+                    document.getElementById("user_inputLocation").value;
+
+        document.getElementById('displayDepartment').innerHTML = 
+                    document.getElementById("user_inputDepartment").value;
+                    
+        document.getElementById('displayDescription').innerHTML = 
+                    document.getElementById("user_inputDescription").value;
+
+
     }
   </script>
 
@@ -13,15 +27,45 @@
 <body>
 
   <form>
-    <label><b>Enter a Message</b></label>
-    <input type="text" name="message" id="user_input">
+    <table >
+    
+    	<tr>
+    		<td></td>
+    		<td></td>
+    	</tr>
+    	
+    	<tr>
+    		<td><b>OPID</b></td>
+    		<td><input type="text" name="messageOPID" id="user_inputOPID"></td>
+    		<td>this is their username and network login</td>
+    	</tr>
+    	<tr>
+	    	<td><b>Device ID</b></td>
+	    	<td><input type="text" name="messageDeviceID" id="user_inputDeviceID"></td>
+    	</tr>
+    	<tr>
+    		<td><b>Location</b></td>
+    		<td><input type="text" name="messageLocation" id="user_inputLocation"></td>
+    	</tr>
+    	<tr>
+    		<td><b>Department</b></td>
+    		<td><input type="text" name="messageDepartment" id="user_inputDepartment"></td>
+    	</tr>
+    	<tr>
+    		<td><b>Description</b></td>
+    		<td><input type="text" name="messageDescription" id="user_inputDescription" style="width: 300px;"  size="50" height="500"></td>
+    	</tr>
+    </table>
+    
   </form>
 
   <input type="submit" onclick="showInput();"><br/>
-  <label>OPID: </label><p><span id='display'></span></p>
-  <label>Device ID: </label>
-  <label>Location: </label>
-  <label>Department: </label>
-  <lable>Description: </lable>
+<hr>
+<br>
+  <p>OPID: <span id='displayOPID'></span></p>
+  <p>Device ID: <span id='displayDeviceID'></span></p>
+  <p>Location: <span id='displayLocation'></span></p>
+  <p>Department: <span id='displayDepartment'></span></p>
+  <p>Description: <span id='displayDescription'></span></p>
   </body>
 </html>
