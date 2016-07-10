@@ -1,26 +1,70 @@
-<title>SD Template</title>
-<p>Hello World</p>
-<p>Dscription</p>
-<p>Contact</p>
-OPID
-Device ID
-Location
-Department
-<br><br><br><br><br>
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+  <meta charset="UTF-8">
+  <script language="JavaScript">
+    function showInput() {
+        document.getElementById('displayOPID').innerHTML = 
+                    document.getElementById("user_inputOPID").value;
 
-<form>
-  First name:<br>
-  <input type="text" name="firstname"><br>
-  Last name:<br>
-  <input type="text" name="lastname">
-</form>
+        document.getElementById('displayDeviceID').innerHTML = 
+                    document.getElementById("user_inputDeviceID").value;
+
+        document.getElementById('displayLocation').innerHTML = 
+                    document.getElementById("user_inputLocation").value;
+
+        document.getElementById('displayDepartment').innerHTML = 
+                    document.getElementById("user_inputDepartment").value;
+                    
+        document.getElementById('displayDescription').innerHTML = 
+                    document.getElementById("user_inputDescription").value;
 
 
+    }
+  </script>
 
-<form action="action_page.php">
-  First name:<br>
-  <input type="text" name="firstname" value="Mickey"><br>
-  Last name:<br>
-  <input type="text" name="lastname" value="Mouse"><br><br>
-  <input type="submit" value="Submit">
-</form>
+  </head>
+<body>
+
+  <form>
+    <table >
+    
+    	<tr>
+    		<td></td>
+    		<td></td>
+    	</tr>
+    	<tr>
+    		<td><b>Description</b></td>
+    		<td><input type="text" name="messageDescription" id="user_inputDescription" style="width: 300px;"  size="50" height="500"></td>
+    	</tr>
+
+    	<tr>
+    		<td><b>OPID</b></td>
+    		<td><input type="text" name="messageOPID" id="user_inputOPID"></td>
+    	</tr>
+    	<tr>
+	    	<td><b>Device ID</b></td>
+	    	<td><input type="text" name="messageDeviceID" id="user_inputDeviceID"></td>
+    	</tr>
+    	<tr>
+    		<td><b>Department</b></td>
+    		<td><input type="text" name="messageDepartment" id="user_inputDepartment"></td>
+    	</tr>
+    	<tr>
+    		<td><b>Location</b></td>
+    		<td><input type="text" name="messageLocation" id="user_inputLocation"></td>
+    	</tr>
+    </table>
+    
+  </form>
+
+  <input type="submit" onclick="showInput();"><br/>
+<hr>
+<br>
+  <p>OPID: <span id='displayOPID'></span></p>
+  <p>Device ID: <span id='displayDeviceID'></span></p>
+  <p>Department: <span id='displayDepartment'></span></p>
+  <p>Location: <span id='displayLocation'></span></p>
+  <p>Description: <span id='displayDescription'></span></p>
+  </body>
+</html>
